@@ -16,6 +16,7 @@
 -(id<AGTMoney>)reduceToCurrency:(NSString *)currency
                      withBroker:(AGTBroker *)broker;
 
+
 @end
 
 
@@ -24,7 +25,7 @@
 @property (nonatomic, readonly) NSNumber * amount;
 +(id) euroWithAmount:(NSInteger)amount;
 +(id) dollarWithAmount:(NSInteger)amount;
-
-
++(id) libraEsterlinaWithAmount:(NSInteger)amount;
++(id) yenWithAmount:(NSInteger)amount;
 
 @end

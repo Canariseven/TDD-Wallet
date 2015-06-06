@@ -21,7 +21,12 @@
 +(id) dollarWithAmount:(NSInteger)amount{
     return [[AGTMoney alloc]initWithAmount:amount currency:@"USD"];
 }
-
++(id) libraEsterlinaWithAmount:(NSInteger)amount{
+    return [[AGTMoney alloc]initWithAmount:amount currency:@"GBP"];
+}
++(id) yenWithAmount:(NSInteger)amount{
+    return [[AGTMoney alloc]initWithAmount:amount currency:@"JPY"];
+}
 
 
 -(id)initWithAmount:(NSInteger )amount currency:(NSString *)currency{
