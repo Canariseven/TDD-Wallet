@@ -25,12 +25,13 @@
     return self;
 }
 -(id<AGTMoney>)plus:(AGTMoney *)other{
-    
+    NSUInteger index = 0;
     for (AGTMoney *each in self.moneys) {
         if ([each.currency isEqualToString:other.currency]) {
-            [each plus:other];
+            [self.moneys replaceObjectAtIndex:index withObject:[each plus:other]];
             return self;
         }
+        index++;
     }
     [self.moneys addObject:other];
     return self;
@@ -52,7 +53,15 @@
     }
     return result;
 }
-
+-(AGTMoney *)totalOfCurrency:(NSString *)currency{
+    AGTMoney * total;
+    for (AGTMoney *each in self.moneys) {
+        if ([each.currency isEqualToString:currency]) {
+            total = each;
+        }
+    }
+    return total;
+}
 #pragma mark - Notifications
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc{
     [nc addObserver:self selector:@selector(dumpToDisk:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];

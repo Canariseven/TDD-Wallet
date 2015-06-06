@@ -11,19 +11,33 @@
 #import "AGTBroker.h"
 #import "AGTWallet.h"
 @interface AGTWalletTests : XCTestCase
-
+@property (nonatomic, strong) AGTMoney *fiveEuro;
+@property (nonatomic, strong) AGTMoney *tenDollars;
+@property (nonatomic, strong) AGTMoney *twoEuros;
+@property (nonatomic, strong) AGTWallet *wallet;
 @end
 
 @implementation AGTWalletTests
 
 - (void)setUp {
     [super setUp];
+    self.fiveEuro = [AGTMoney euroWithAmount:5];
+    self.twoEuros = [AGTMoney euroWithAmount:2];
+    self.tenDollars = [AGTMoney dollarWithAmount:10];
+    self.wallet = [[AGTWallet alloc]initWithAmount:5 currency:@"EUR"];
+    [self.wallet plus:self.fiveEuro];
+    [self.wallet plus:self.twoEuros];
+    [self.wallet plus:self.tenDollars];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    self.fiveEuro = nil;
+    self.tenDollars = nil;
+    self.twoEuros = nil;
+    self.wallet = nil;
 }
 
 
@@ -47,12 +61,12 @@
     XCTAssertEqualObjects(reduced, [AGTMoney dollarWithAmount:100],@"€40 + $20 = $100 2:1");
 }
 -(void) testPlusEurOnWalletOnEurZone{
-    AGTMoney *five = [AGTMoney euroWithAmount:5];
-    AGTMoney *dollar = [AGTMoney dollarWithAmount:20];
-    AGTWallet *wallet = [[AGTWallet alloc]initWithAmount:5 currency:@"EUR"];
-    [wallet plus:five];
-    [wallet plus:dollar];
-    NSInteger totalCurrency = [wallet count];
+    NSInteger totalCurrency = [self.wallet count];
     XCTAssertEqual(totalCurrency, 2,@"The total of currency has 1");
+}
+-(void) testCastCurrencyOnCell{
+    AGTMoney *totalEuros = [self.wallet totalOfCurrency:@"EUR"];
+    AGTMoney *totalLab = [[self.fiveEuro plus:self.twoEuros] plus:[AGTMoney euroWithAmount:5]];
+    XCTAssertEqualObjects(totalEuros, totalLab,@"TotalEuros == totalLab");
 }
 @end
