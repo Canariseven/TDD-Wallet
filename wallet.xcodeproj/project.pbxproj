@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32196D011B20D5CB00F6DAC8 /* NSObject+GNUStepAddons.m in Sources */ = {isa = PBXBuildFile; fileRef = 32196D001B20D5CB00F6DAC8 /* NSObject+GNUStepAddons.m */; };
+		32196D031B20D89000F6DAC8 /* AGTMoneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32196D021B20D89000F6DAC8 /* AGTMoneyTests.m */; };
+		32196D041B20D90C00F6DAC8 /* AGTMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 329614E81B1E4A0400FBC23B /* AGTMoney.m */; };
+		3227967C1B2311CC006F2260 /* AGTSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3227967A1B2311CC006F2260 /* AGTSimpleViewController.m */; };
+		3227967D1B2311CC006F2260 /* AGTSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3227967B1B2311CC006F2260 /* AGTSimpleViewController.xib */; };
+		322796801B231207006F2260 /* AGTControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3227967F1B231207006F2260 /* AGTControllerTests.m */; };
+		322796831B231A03006F2260 /* AGTWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322796821B231A03006F2260 /* AGTWalletTableViewController.m */; };
+		322796861B231FAC006F2260 /* AGTNSNotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 322796851B231FAC006F2260 /* AGTNSNotificationCenterTests.m */; };
+		322796891B23223D006F2260 /* AGTFakeNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 322796881B23223D006F2260 /* AGTFakeNotificationCenter.m */; };
 		327FEBD51B1CF3B000AF3A64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FEBD41B1CF3B000AF3A64 /* main.m */; };
 		327FEBD81B1CF3B000AF3A64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FEBD71B1CF3B000AF3A64 /* AppDelegate.m */; };
 		327FEBDB1B1CF3B000AF3A64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 327FEBDA1B1CF3B000AF3A64 /* ViewController.m */; };
 		327FEBDE1B1CF3B000AF3A64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 327FEBDC1B1CF3B000AF3A64 /* Main.storyboard */; };
 		327FEBE01B1CF3B000AF3A64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 327FEBDF1B1CF3B000AF3A64 /* Images.xcassets */; };
 		327FEBE31B1CF3B000AF3A64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327FEBE11B1CF3B000AF3A64 /* LaunchScreen.xib */; };
-		329614DB1B1E34AC00FBC23B /* AGTEuroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 329614DA1B1E34AC00FBC23B /* AGTEuroTests.m */; };
-		329614DF1B1E365500FBC23B /* AGTEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 329614DE1B1E365500FBC23B /* AGTEuro.m */; };
-		329614E01B1E374900FBC23B /* AGTEuro.m in Sources */ = {isa = PBXBuildFile; fileRef = 329614DE1B1E365500FBC23B /* AGTEuro.m */; };
-		329614E21B1E454900FBC23B /* AGTDollarTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 329614E11B1E454900FBC23B /* AGTDollarTest.m */; };
-		329614E51B1E464B00FBC23B /* AGTDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 329614E41B1E464B00FBC23B /* AGTDollar.m */; };
-		329614E61B1E465600FBC23B /* AGTDollar.m in Sources */ = {isa = PBXBuildFile; fileRef = 329614E41B1E464B00FBC23B /* AGTDollar.m */; };
+		329614E91B1E4A0400FBC23B /* AGTMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = 329614E81B1E4A0400FBC23B /* AGTMoney.m */; };
+		32CCF49E1B22212700C23C16 /* AGTBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF49D1B22212700C23C16 /* AGTBrokerTests.m */; };
+		32CCF4A11B22222400C23C16 /* AGTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF4A01B22222400C23C16 /* AGTBroker.m */; };
+		32CCF4A21B22223600C23C16 /* AGTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF4A01B22222400C23C16 /* AGTBroker.m */; };
+		32CCF4A41B2233A400C23C16 /* AGTWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF4A31B2233A400C23C16 /* AGTWalletTests.m */; };
+		32CCF4A71B22378F00C23C16 /* AGTWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF4A61B22378F00C23C16 /* AGTWallet.m */; };
+		32CCF4A81B22392B00C23C16 /* AGTWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CCF4A61B22378F00C23C16 /* AGTWallet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32196CFF1B20D5CB00F6DAC8 /* NSObject+GNUStepAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GNUStepAddons.h"; sourceTree = "<group>"; };
+		32196D001B20D5CB00F6DAC8 /* NSObject+GNUStepAddons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GNUStepAddons.m"; sourceTree = "<group>"; };
+		32196D021B20D89000F6DAC8 /* AGTMoneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMoneyTests.m; sourceTree = "<group>"; };
+		322796791B2311CC006F2260 /* AGTSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleViewController.h; sourceTree = "<group>"; };
+		3227967A1B2311CC006F2260 /* AGTSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleViewController.m; sourceTree = "<group>"; };
+		3227967B1B2311CC006F2260 /* AGTSimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTSimpleViewController.xib; sourceTree = "<group>"; };
+		3227967F1B231207006F2260 /* AGTControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTControllerTests.m; sourceTree = "<group>"; };
+		322796811B231A03006F2260 /* AGTWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTWalletTableViewController.h; sourceTree = "<group>"; };
+		322796821B231A03006F2260 /* AGTWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTWalletTableViewController.m; sourceTree = "<group>"; };
+		322796851B231FAC006F2260 /* AGTNSNotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNSNotificationCenterTests.m; sourceTree = "<group>"; };
+		322796871B23223D006F2260 /* AGTFakeNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTFakeNotificationCenter.h; sourceTree = "<group>"; };
+		322796881B23223D006F2260 /* AGTFakeNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTFakeNotificationCenter.m; sourceTree = "<group>"; };
 		327FEBCF1B1CF3B000AF3A64 /* wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		327FEBD31B1CF3B000AF3A64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		327FEBD41B1CF3B000AF3A64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,12 +66,14 @@
 		327FEBE21B1CF3B000AF3A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		327FEBE81B1CF3B000AF3A64 /* walletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = walletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		327FEBED1B1CF3B000AF3A64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		329614DA1B1E34AC00FBC23B /* AGTEuroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTEuroTests.m; sourceTree = "<group>"; };
-		329614DD1B1E365500FBC23B /* AGTEuro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTEuro.h; sourceTree = "<group>"; };
-		329614DE1B1E365500FBC23B /* AGTEuro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTEuro.m; sourceTree = "<group>"; };
-		329614E11B1E454900FBC23B /* AGTDollarTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTDollarTest.m; sourceTree = "<group>"; };
-		329614E31B1E464B00FBC23B /* AGTDollar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTDollar.h; sourceTree = "<group>"; };
-		329614E41B1E464B00FBC23B /* AGTDollar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTDollar.m; sourceTree = "<group>"; };
+		329614E71B1E4A0400FBC23B /* AGTMoney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTMoney.h; sourceTree = "<group>"; };
+		329614E81B1E4A0400FBC23B /* AGTMoney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTMoney.m; sourceTree = "<group>"; };
+		32CCF49D1B22212700C23C16 /* AGTBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBrokerTests.m; sourceTree = "<group>"; };
+		32CCF49F1B22222400C23C16 /* AGTBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTBroker.h; sourceTree = "<group>"; };
+		32CCF4A01B22222400C23C16 /* AGTBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBroker.m; sourceTree = "<group>"; };
+		32CCF4A31B2233A400C23C16 /* AGTWalletTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTWalletTests.m; sourceTree = "<group>"; };
+		32CCF4A51B22378F00C23C16 /* AGTWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTWallet.h; sourceTree = "<group>"; };
+		32CCF4A61B22378F00C23C16 /* AGTWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTWallet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +94,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32196CFE1B20D52A00F6DAC8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				32196CFF1B20D5CB00F6DAC8 /* NSObject+GNUStepAddons.h */,
+				32196D001B20D5CB00F6DAC8 /* NSObject+GNUStepAddons.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		322796751B231165006F2260 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				322796791B2311CC006F2260 /* AGTSimpleViewController.h */,
+				3227967A1B2311CC006F2260 /* AGTSimpleViewController.m */,
+				3227967B1B2311CC006F2260 /* AGTSimpleViewController.xib */,
+				322796811B231A03006F2260 /* AGTWalletTableViewController.h */,
+				322796821B231A03006F2260 /* AGTWalletTableViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		3227967E1B2311D4006F2260 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3227967F1B231207006F2260 /* AGTControllerTests.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		322796841B231F81006F2260 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				322796851B231FAC006F2260 /* AGTNSNotificationCenterTests.m */,
+				322796871B23223D006F2260 /* AGTFakeNotificationCenter.h */,
+				322796881B23223D006F2260 /* AGTFakeNotificationCenter.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
 		327FEBC61B1CF3B000AF3A64 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +154,8 @@
 		327FEBD11B1CF3B000AF3A64 /* wallet */ = {
 			isa = PBXGroup;
 			children = (
+				322796751B231165006F2260 /* controllers */,
+				32196CFE1B20D52A00F6DAC8 /* Category */,
 				329614DC1B1E363400FBC23B /* Models */,
 				327FEBD61B1CF3B000AF3A64 /* AppDelegate.h */,
 				327FEBD71B1CF3B000AF3A64 /* AppDelegate.m */,
@@ -116,6 +181,8 @@
 		327FEBEB1B1CF3B000AF3A64 /* walletTests */ = {
 			isa = PBXGroup;
 			children = (
+				322796841B231F81006F2260 /* Singletons */,
+				3227967E1B2311D4006F2260 /* Controllers */,
 				329614D91B1E348D00FBC23B /* Models */,
 				327FEBEC1B1CF3B000AF3A64 /* Supporting Files */,
 			);
@@ -133,8 +200,9 @@
 		329614D91B1E348D00FBC23B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				329614DA1B1E34AC00FBC23B /* AGTEuroTests.m */,
-				329614E11B1E454900FBC23B /* AGTDollarTest.m */,
+				32196D021B20D89000F6DAC8 /* AGTMoneyTests.m */,
+				32CCF49D1B22212700C23C16 /* AGTBrokerTests.m */,
+				32CCF4A31B2233A400C23C16 /* AGTWalletTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -142,10 +210,12 @@
 		329614DC1B1E363400FBC23B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				329614DD1B1E365500FBC23B /* AGTEuro.h */,
-				329614DE1B1E365500FBC23B /* AGTEuro.m */,
-				329614E31B1E464B00FBC23B /* AGTDollar.h */,
-				329614E41B1E464B00FBC23B /* AGTDollar.m */,
+				329614E71B1E4A0400FBC23B /* AGTMoney.h */,
+				329614E81B1E4A0400FBC23B /* AGTMoney.m */,
+				32CCF49F1B22222400C23C16 /* AGTBroker.h */,
+				32CCF4A01B22222400C23C16 /* AGTBroker.m */,
+				32CCF4A51B22378F00C23C16 /* AGTWallet.h */,
+				32CCF4A61B22378F00C23C16 /* AGTWallet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -231,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				327FEBDE1B1CF3B000AF3A64 /* Main.storyboard in Resources */,
+				3227967D1B2311CC006F2260 /* AGTSimpleViewController.xib in Resources */,
 				327FEBE31B1CF3B000AF3A64 /* LaunchScreen.xib in Resources */,
 				327FEBE01B1CF3B000AF3A64 /* Images.xcassets in Resources */,
 			);
@@ -250,11 +321,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329614E51B1E464B00FBC23B /* AGTDollar.m in Sources */,
+				32CCF4A71B22378F00C23C16 /* AGTWallet.m in Sources */,
+				3227967C1B2311CC006F2260 /* AGTSimpleViewController.m in Sources */,
 				327FEBDB1B1CF3B000AF3A64 /* ViewController.m in Sources */,
+				32196D011B20D5CB00F6DAC8 /* NSObject+GNUStepAddons.m in Sources */,
 				327FEBD81B1CF3B000AF3A64 /* AppDelegate.m in Sources */,
+				329614E91B1E4A0400FBC23B /* AGTMoney.m in Sources */,
 				327FEBD51B1CF3B000AF3A64 /* main.m in Sources */,
-				329614DF1B1E365500FBC23B /* AGTEuro.m in Sources */,
+				322796831B231A03006F2260 /* AGTWalletTableViewController.m in Sources */,
+				32CCF4A11B22222400C23C16 /* AGTBroker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +337,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329614E61B1E465600FBC23B /* AGTDollar.m in Sources */,
-				329614E21B1E454900FBC23B /* AGTDollarTest.m in Sources */,
-				329614DB1B1E34AC00FBC23B /* AGTEuroTests.m in Sources */,
-				329614E01B1E374900FBC23B /* AGTEuro.m in Sources */,
+				322796891B23223D006F2260 /* AGTFakeNotificationCenter.m in Sources */,
+				32CCF49E1B22212700C23C16 /* AGTBrokerTests.m in Sources */,
+				322796861B231FAC006F2260 /* AGTNSNotificationCenterTests.m in Sources */,
+				322796801B231207006F2260 /* AGTControllerTests.m in Sources */,
+				32CCF4A41B2233A400C23C16 /* AGTWalletTests.m in Sources */,
+				32196D031B20D89000F6DAC8 /* AGTMoneyTests.m in Sources */,
+				32CCF4A81B22392B00C23C16 /* AGTWallet.m in Sources */,
+				32196D041B20D90C00F6DAC8 /* AGTMoney.m in Sources */,
+				32CCF4A21B22223600C23C16 /* AGTBroker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
