@@ -73,13 +73,6 @@
     AGTMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
     XCTAssertEqualObjects(reduced, [AGTMoney dollarWithAmount:100],@"€40 + $20 = $100 2:1");
 }
--(void)testNumberOfMoneysByCurrency{
-    NSInteger numberMoneys = [self.wallet numberOfMoneysForCurrency:@"EUR"];
-    XCTAssertEqual(numberMoneys, 3);
-    [self.wallet plus:[AGTMoney euroWithAmount:200]];
-    numberMoneys = [self.wallet numberOfMoneysForCurrency:@"EUR"];
-    XCTAssertEqual(numberMoneys, 4);
-}
 -(void)testNumbeOfCurrencies{
     NSInteger numberOfCurrencys = self.wallet.numberOfCurrencies;
     XCTAssertEqual(numberOfCurrencys, 2,@"The number of total currencies must be 2");

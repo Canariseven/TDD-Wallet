@@ -12,6 +12,5 @@
 @property (nonatomic, readonly) NSUInteger count;
 @property (nonatomic, readonly) NSUInteger numberOfCurrencies;
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc;
--(NSInteger)numberOfMoneysForCurrency:(NSString *)currency;
 -(NSInteger)numberOfMoneysAtIndex:(NSInteger)index;
 @end
