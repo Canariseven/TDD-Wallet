@@ -64,7 +64,7 @@
 // N sections + 1 of Total on €
 -(void)testNumberOfSectionsPlusTotalOnEuros{
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    XCTAssertEqual(sections + 1, [self.wallet count] + 1, @"Number of sections must be the same as the number of currency plus one");
+    XCTAssertEqual(sections, [self.wallet count] + 1, @"Number of sections must be the same as the number of currency plus one");
 }
 
 
