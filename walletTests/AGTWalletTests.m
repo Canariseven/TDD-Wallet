@@ -46,5 +46,13 @@
     AGTMoney *reduced = [broker reduce:wallet toCurrency:@"USD"];
     XCTAssertEqualObjects(reduced, [AGTMoney dollarWithAmount:100],@"€40 + $20 = $100 2:1");
 }
-
+-(void) testPlusEurOnWalletOnEurZone{
+    AGTMoney *five = [AGTMoney euroWithAmount:5];
+    AGTMoney *dollar = [AGTMoney dollarWithAmount:20];
+    AGTWallet *wallet = [[AGTWallet alloc]initWithAmount:5 currency:@"EUR"];
+    [wallet plus:five];
+    [wallet plus:dollar];
+    NSInteger totalCurrency = [wallet count];
+    XCTAssertEqual(totalCurrency, 2,@"The total of currency has 1");
+}
 @end

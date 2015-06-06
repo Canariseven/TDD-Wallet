@@ -11,12 +11,14 @@
 #import "AGTSimpleViewController.h"
 #import "AGTWalletTableViewController.h"
 #import "AGTWallet.h"
+#import "AGTBroker.h"
 @interface AGTControllerTests : XCTestCase
 @property (nonatomic, strong) AGTWalletTableViewController *walletVC;
 @property (nonatomic, strong) AGTWallet *wallet;
 @property (nonatomic, strong) AGTSimpleViewController *simpleVC;
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) AGTBroker *broker;
 @end
 
 @implementation AGTControllerTests
@@ -32,6 +34,10 @@
     self.wallet = [[AGTWallet alloc]initWithAmount:1 currency:@"USD"];
     [self.wallet plus:[AGTMoney euroWithAmount:1]];
     self.walletVC = [[AGTWalletTableViewController alloc]initWithModel:self.wallet];
+    self.broker = [AGTBroker new];
+    [self.broker addRate:1/2 fromCurrency:@"USD" toCurrency:@"EUR"];
+    [self.broker addRate:2 fromCurrency:@"USD" toCurrency:@"YEN"];
+    [self.broker addRate:1/4 fromCurrency:@"USD" toCurrency:@"GBP"];
 }
 
 - (void)tearDown {
@@ -62,6 +68,8 @@
 //}
 
 // N sections + 1 of Total on €
+// La cantidad de divisas nos la dice el broker, o también podemos modificar el método de adición del wallet.
+// Por facilidad la pillamos del broker.
 -(void)testNumberOfSectionsPlusTotalOnEuros{
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
     XCTAssertEqual(sections, [self.wallet count] + 1, @"Number of sections must be the same as the number of currency plus one");

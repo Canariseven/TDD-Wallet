@@ -25,6 +25,13 @@
     return self;
 }
 -(id<AGTMoney>)plus:(AGTMoney *)other{
+    
+    for (AGTMoney *each in self.moneys) {
+        if ([each.currency isEqualToString:other.currency]) {
+            [each plus:other];
+            return self;
+        }
+    }
     [self.moneys addObject:other];
     return self;
 }
