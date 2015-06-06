@@ -37,11 +37,15 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.model.count + 1;
+    return self.model.numberOfCurrencies + 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.model.count + 1;
+    if (section == self.model.numberOfCurrencies + 1) {
+        return 1;
+    }
+    NSInteger num = [self.model numberOfMoneysAtIndex:section] + 1;
+    return num;
 }
 
 /*

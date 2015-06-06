@@ -18,7 +18,6 @@
 @property (nonatomic, strong) AGTSimpleViewController *simpleVC;
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) AGTBroker *broker;
 @end
 
 @implementation AGTControllerTests
@@ -32,12 +31,14 @@
     self.label = [[UILabel alloc]initWithFrame:CGRectZero];
     self.simpleVC.displayLabel = self.label;
     self.wallet = [[AGTWallet alloc]initWithAmount:1 currency:@"USD"];
+    [self.wallet plus:[AGTMoney dollarWithAmount:20]];
     [self.wallet plus:[AGTMoney euroWithAmount:1]];
+    [self.wallet plus:[AGTMoney euroWithAmount:10]];
+    [self.wallet plus:[AGTMoney euroWithAmount:50]];
+    [self.wallet plus:[AGTMoney libraEsterlinaWithAmount:20]];
+    [self.wallet plus:[AGTMoney libraEsterlinaWithAmount:5]];
+    [self.wallet plus:[AGTMoney libraEsterlinaWithAmount:30]];
     self.walletVC = [[AGTWalletTableViewController alloc]initWithModel:self.wallet];
-    self.broker = [AGTBroker new];
-    [self.broker addRate:1/2 fromCurrency:@"USD" toCurrency:@"EUR"];
-    [self.broker addRate:2 fromCurrency:@"USD" toCurrency:@"YEN"];
-    [self.broker addRate:1/4 fromCurrency:@"USD" toCurrency:@"GBP"];
 }
 
 - (void)tearDown {
@@ -47,6 +48,8 @@
     self.simpleVC = nil;
     self.button = nil;
     self.label = nil;
+    self.wallet = nil;
+    self.walletVC = nil;
     
 }
 
@@ -61,7 +64,7 @@
 //-(void) testThatTableHasOneSection{
 //    NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
 //    XCTAssertEqual(sections,1,@"The can only be one");
-//    
+//
 //}
 //-(void)testThatNumberOfCellsIsNumberOfMoenysPlusOne{
 //    XCTAssertEqual(self.wallet.count + 1, [self.walletVC tableView:nil numberOfRowsInSection:0],@"Number of cells us the number of moneys plus 1 (the total)");
@@ -72,11 +75,25 @@
 // Por facilidad la pillamos del broker.
 -(void)testNumberOfSectionsPlusTotalOnEuros{
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil];
-    XCTAssertEqual(sections, [self.wallet count] + 1, @"Number of sections must be the same as the number of currency plus one");
+    XCTAssertEqual(sections, [self.wallet numberOfCurrencies] + 1, @"Number of sections must be the same as the number of currency plus one");
 }
 
-
-
+-(void)testNumberTotalOfCells{
+    // Cuidado con la última sección
+    NSInteger sections = [self.wallet numberOfCurrencies];
+    NSInteger cells = 0;
+    for (NSInteger section; section<= sections-1; section++) {
+        cells += [self.walletVC tableView:nil numberOfRowsInSection:section];
+        NSLog(@"%ld",(long)[self.walletVC tableView:nil numberOfRowsInSection:section]);
+    }
+    
+    NSInteger totalCell = sections + [self.wallet count];
+    XCTAssertEqual(totalCell, cells,@"Number of cells by section must be n + 1");
+}
+-(void)testLastSectionOneCell{
+    NSInteger cellsLastSection = [self.walletVC tableView:nil numberOfRowsInSection:self.wallet.numberOfCurrencies + 1];
+    XCTAssertEqual(1, cellsLastSection,@"Last Section of tableView has must only one cell");
+}
 
 
 

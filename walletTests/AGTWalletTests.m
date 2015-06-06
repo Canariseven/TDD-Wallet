@@ -39,7 +39,20 @@
     self.twoEuros = nil;
     self.wallet = nil;
 }
-
+-(void)testPlusSameValues{
+    AGTWallet *wal = [[AGTWallet alloc]initWithAmount:2 currency:@"EUR"];
+    [wal plus:[AGTMoney euroWithAmount:1]];
+    [wal plus:[AGTMoney euroWithAmount:10]];
+    XCTAssertEqual([wal numberOfMoneysAtIndex:0], 3,@"Number of Moneys to index 0 must be 3");
+    [wal plus:[AGTMoney dollarWithAmount:20]];
+    [wal plus:[AGTMoney dollarWithAmount:20]];
+    [wal plus:[AGTMoney dollarWithAmount:20]];
+    [wal plus:[AGTMoney dollarWithAmount:20]];
+    [wal plus:[AGTMoney dollarWithAmount:20]];
+    XCTAssertEqual([wal numberOfMoneysAtIndex:1], 5,@"Number of Moneys to index 1 must be 5");
+    XCTAssertEqual([wal numberOfMoneysAtIndex:0], 3,@"Number of Moneys to index 0 must be 3");
+    //Este lo forzé de este modo porque tenía un fallo al insertar en el nuevo array, me faltó incrementar el index++
+}
 
 // 1$ = 2€
 -(void) testReduction{
@@ -66,5 +79,13 @@
     [self.wallet plus:[AGTMoney euroWithAmount:200]];
     numberMoneys = [self.wallet numberOfMoneysForCurrency:@"EUR"];
     XCTAssertEqual(numberMoneys, 4);
+}
+-(void)testNumbeOfCurrencies{
+    NSInteger numberOfCurrencys = self.wallet.numberOfCurrencies;
+    XCTAssertEqual(numberOfCurrencys, 2,@"The number of total currencies must be 2");
+}
+-(void)testNumberOfMoneyAtIndex{
+    NSInteger numberOfMoneys = [self.wallet numberOfMoneysAtIndex:0];
+    XCTAssertEqual(numberOfMoneys, 3,@"The number of moneus for section 0 must be 3");
 }
 @end
