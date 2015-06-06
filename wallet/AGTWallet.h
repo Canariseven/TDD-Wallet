@@ -11,4 +11,5 @@
 @interface AGTWallet : NSObject<AGTMoney>
 @property (nonatomic, readonly) NSUInteger count;
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc;
+-(NSInteger)numberOfMoneysForCurrency:(NSString *)currency;
 @end

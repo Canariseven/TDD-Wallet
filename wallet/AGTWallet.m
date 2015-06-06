@@ -45,12 +45,29 @@
     }
     return result;
 }
-
+-(NSInteger)numberOfMoneysForCurrency:(NSString *)currency{
+    NSInteger total = 0;
+    for (AGTMoney *each in self.moneys) {
+        if ([each.currency isEqualToString:currency]) {
+            total++;
+        }
+    }
+    return total;
+}
 #pragma mark - Notifications
 -(void)subscribeToMemoryWarning:(NSNotificationCenter *)nc{
     [nc addObserver:self selector:@selector(dumpToDisk:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 }
 -(void)dumpToDisk:(NSNotification *)nc{
     NSLog(@"Guardar las cosas en disco cuando la cosa se ponga fea");
+}
+
+#pragma mark - Overwrite
+-(NSString *)description{
+NSString *str = @"";
+    for (AGTMoney *each in self.moneys) {
+        str = [NSString stringWithFormat:@"%@ \n%@",str,each];
+    }
+    return str;
 }
 @end
